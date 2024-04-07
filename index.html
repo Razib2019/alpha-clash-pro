@@ -149,33 +149,41 @@
           <!-- Keyboard End-->
           <!-- Life Score -->
           <div class="flex justify-between w-3/5">
+            <!-- Display Life -->
             <button class="btn rounded-full bg-pink-500 text-white px-4">
               Life
               <img src="./images/heart.svg" alt="" />
-              <span>1</span>
+              <span id="current-life">5</span>
             </button>
+            <!-- Display Score -->
             <button class="btn rounded-full bg-purple-700 text-white px-4">
               Score
               <img src="./images/dollar.svg" alt="" />
-              <span>1</span>
+              <span id="current-score">0</span>
             </button>
           </div>
         </div>
       </section>
       <!-- Playground End -->
       <!-- Final Score Start -->
-      <!-- Score -->
       <section
-        class="score flex items-center justify-center min-h-screen hidden"
+        id="final-score"
+        class="flex items-center justify-center min-h-screen hidden"
       >
         <div
           class="text-white text-center space-y-6 bg-[#FFFFFF33] p-6 rounded-lg"
         >
+          <h4 class="text-3xl">Game Over</h4>
           <h1 class="text-8xl">
             <span class="font-extrabold">Score:</span>
-            <span>14</span>
+            <span id="last-score">14</span>
           </h1>
-          <button class="btn">Play Again</button>
+          <button
+            onclick="play()"
+            class="btn bg-white text-black hover:text-white"
+          >
+            Play Again
+          </button>
           <p>Practice Will Make You a Pro</p>
         </div>
       </section>
